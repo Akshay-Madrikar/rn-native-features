@@ -3,9 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Platform } from 'react-native';
 
-import PlacesListScreen from '../screens/PlacesListScreen';
+import PlacesListScreen, {
+  placesListScreenOptions,
+} from '../screens/PlacesListScreen';
 import PlaceDetailScreen from '../screens/PlaceDetailScreen';
-import NewPlaceScreen from '../screens/NewPlaceScreen';
+import NewPlaceScreen, {
+  newPlaceScreenOptions,
+} from '../screens/NewPlaceScreen';
 import MapScreen from '../screens/MapScreen';
 import Colors from '../constants/Colors';
 
@@ -22,9 +26,17 @@ export const PlacesNavigator = () => {
   return (
     <NavigationContainer>
       <MyStack.Navigator screenOptions={defaultNavOptions}>
-        <MyStack.Screen name="Places" component={PlacesListScreen} />
+        <MyStack.Screen
+          name="Places"
+          component={PlacesListScreen}
+          options={placesListScreenOptions}
+        />
         <MyStack.Screen name="PlaceDetail" component={PlaceDetailScreen} />
-        <MyStack.Screen name="NewPlace" component={NewPlaceScreen} />
+        <MyStack.Screen
+          name="NewPlace"
+          component={NewPlaceScreen}
+          options={newPlaceScreenOptions}
+        />
         <MyStack.Screen name="Map" component={MapScreen} />
       </MyStack.Navigator>
     </NavigationContainer>

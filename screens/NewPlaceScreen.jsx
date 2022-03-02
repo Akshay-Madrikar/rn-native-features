@@ -11,4 +11,10 @@ const NewPlaceScreen = (props) => {
 
 const styles = StyleSheet.create({});
 
+export const newPlaceScreenOptions = (navData) => {
+  return {
+    headerTitle: 'Add Place',
+  };
+};
+
 export default NewPlaceScreen;
