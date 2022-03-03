@@ -6,7 +6,9 @@ import { Platform } from 'react-native';
 import PlacesListScreen, {
   placesListScreenOptions,
 } from '../screens/PlacesListScreen';
-import PlaceDetailScreen from '../screens/PlaceDetailScreen';
+import PlaceDetailScreen, {
+  placeDetailScreenOptions,
+} from '../screens/PlaceDetailScreen';
 import NewPlaceScreen, {
   newPlaceScreenOptions,
 } from '../screens/NewPlaceScreen';
@@ -31,7 +33,11 @@ export const PlacesNavigator = () => {
           component={PlacesListScreen}
           options={placesListScreenOptions}
         />
-        <MyStack.Screen name="PlaceDetail" component={PlaceDetailScreen} />
+        <MyStack.Screen
+          name="PlaceDetail"
+          component={PlaceDetailScreen}
+          options={placeDetailScreenOptions}
+        />
         <MyStack.Screen
           name="NewPlace"
           component={NewPlaceScreen}
